@@ -29,5 +29,34 @@ untis.login().then(() => {
                 "room": lesson.ro[0].name
             });
         });
+        class_list = class_list_edit;
+        class_list_edit = [];
+        class_list.sort((a, b) => {
+            if (a.startTime < b.startTime) return -1;
+            if (a.startTime > b.startTime) return 1;
+            return 0;
+        });
+        for (let i = 0; i < class_list.length; i++) {
+            if (class_list[i + 1] != undefined) {
+                if (class_list[i].name == class_list[i + 1].name && class_list[i].teacher == class_list[i + 1].teacher && class_list[i].room == class_list[i + 1].room) {
+                    class_list[i].endTime = class_list[i + 1].endTime;
+                    class_list.splice(i + 1, 1);
+                    i--;
+                }
+            }
+        }
+        class_list.forEach((lesson) => {
+            class_list_edit.push({
+                "id": lesson.id,
+                "date": lesson.date,
+                "startTime": lesson.startTime,
+                "endTime": lesson.endTime,
+                "name": lesson.name,
+                "teacher": lesson.teacher,
+                "room": lesson.room
+            });
+        });
+        class_list = class_list_edit;
+        class_list_edit = [];
     });
 });
