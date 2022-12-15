@@ -1,0 +1,13 @@
+{
+    "calDav": {
+        "url": "",
+        "username": "",
+        "password": ""
+    },
+    "webUntis": {
+        "school": "",
+        "username": "",
+        "password": "",
+        "server": ""
+    }
+}
