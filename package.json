@@ -1,0 +1,22 @@
+{
+  "name": "webuntis-calender-port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuzImBisonratte/webuntis-calendar-port.git"
+  },
+  "author": "CuzImBisonratte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CuzImBisonratte/webuntis-calendar-port/issues"
+  },
+  "homepage": "https://github.com/CuzImBisonratte/webuntis-calendar-port#readme",
+  "dependencies": {
+    "node-caldav-mod": "^1.0.3"
+  }
+}
